@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue Slots | Curso Vue.js</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="Nivel principiantes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/vue/assets/css/0.styles.221a524c.css" as="style"><link rel="preload" href="/vue/assets/js/app.7f626d32.js" as="script"><link rel="preload" href="/vue/assets/js/2.667916cb.js" as="script"><link rel="preload" href="/vue/assets/js/12.90a80ad9.js" as="script"><link rel="prefetch" href="/vue/assets/js/10.1a5fc0d2.js"><link rel="prefetch" href="/vue/assets/js/11.78a93a47.js"><link rel="prefetch" href="/vue/assets/js/13.57599c97.js"><link rel="prefetch" href="/vue/assets/js/14.573de3f3.js"><link rel="prefetch" href="/vue/assets/js/15.fd70d7b7.js"><link rel="prefetch" href="/vue/assets/js/3.48ae7e51.js"><link rel="prefetch" href="/vue/assets/js/4.010f4d26.js"><link rel="prefetch" href="/vue/assets/js/5.009f7950.js"><link rel="prefetch" href="/vue/assets/js/6.60c067ee.js"><link rel="prefetch" href="/vue/assets/js/7.dfaf1eb0.js"><link rel="prefetch" href="/vue/assets/js/8.1d9a6f8b.js"><link rel="prefetch" href="/vue/assets/js/9.5d278ea6.js">
+    <link rel="stylesheet" href="/vue/assets/css/0.styles.221a524c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue/" class="home-link router-link-active"><!----> <span class="site-name">Curso Vue.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue/directivas/" class="nav-link">
+  Directivas
+</a></div><div class="nav-item"><a href="/vue/tienda/" class="nav-link">
+  Tienda
+</a></div><div class="nav-item"><a href="/vue/componentes/" class="nav-link">
+  Componentes
+</a></div><div class="nav-item"><a href="/vue/slots/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Slots
+</a></div><div class="nav-item"><a href="/vue/router/" class="nav-link">
+  Router
+</a></div><div class="nav-item"><a href="/vue/paginacion/" class="nav-link">
+  Paginación
+</a></div><div class="nav-item"><a href="/vue/vuex/" class="nav-link">
+  Vuex
+</a></div><div class="nav-item"><a href="https://www.youtube.com/playlist?list=PLgh8bcLDakt3oPmNoEfdfF4yd2b6KNCUX" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Canal Youtube
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue/directivas/" class="nav-link">
+  Directivas
+</a></div><div class="nav-item"><a href="/vue/tienda/" class="nav-link">
+  Tienda
+</a></div><div class="nav-item"><a href="/vue/componentes/" class="nav-link">
+  Componentes
+</a></div><div class="nav-item"><a href="/vue/slots/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Slots
+</a></div><div class="nav-item"><a href="/vue/router/" class="nav-link">
+  Router
+</a></div><div class="nav-item"><a href="/vue/paginacion/" class="nav-link">
+  Paginación
+</a></div><div class="nav-item"><a href="/vue/vuex/" class="nav-link">
+  Vuex
+</a></div><div class="nav-item"><a href="https://www.youtube.com/playlist?list=PLgh8bcLDakt3oPmNoEfdfF4yd2b6KNCUX" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Canal Youtube
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue Slots</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/slots/#slot-basico" class="sidebar-link">Slot Básico</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/slots/#componente-slots-vue" class="sidebar-link">Componente Slots.vue</a></li><li class="sidebar-sub-header"><a href="/vue/slots/#vista-slotbasic-vue" class="sidebar-link">Vista SlotBasic.vue</a></li></ul></li><li><a href="/vue/slots/#directiva-v-slot" class="sidebar-link">Directiva v-slot</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue/slots/#v-slot-multiples" class="sidebar-link">v-slot múltiples</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/slots/#componente-esquema-vue" class="sidebar-link">Componente Esquema.vue</a></li><li class="sidebar-sub-header"><a href="/vue/slots/#vista-slotmultiple-vue" class="sidebar-link">Vista SlotMultiple.vue</a></li></ul></li><li><a href="/vue/slots/#v-slot-scoped" class="sidebar-link">v-slot scoped</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/slots/#componente-libro-vue" class="sidebar-link">Componente Libro.vue</a></li><li class="sidebar-sub-header"><a href="/vue/slots/#vista-biblioteca-vue" class="sidebar-link">Vista Biblioteca.vue</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-slots"><a href="#vue-slots" class="header-anchor">#</a> Vue Slots</h1> <h2 id="slot-basico"><a href="#slot-basico" class="header-anchor">#</a> Slot Básico</h2> <h3 id="componente-slots-vue"><a href="#componente-slots-vue" class="header-anchor">#</a> Componente Slots.vue</h3> <p>Crea un componente llamado <strong>Slots.vue</strong></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span><span class="token punctuation">&gt;</span></span>Enviar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="vista-slotbasic-vue"><a href="#vista-slotbasic-vue" class="header-anchor">#</a> Vista SlotBasic.vue</h3> <p>Podemos modificar el texto que por defecto aparece en el slot Componete.vue por el texto que intruzcamos en el archivo de la carpeta Vista entre el componente con slot.</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Slots</span><span class="token punctuation">&gt;</span></span>Cancelar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Slots</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+```js
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> Slots <span class="token keyword">from</span> <span class="token string">'@/components/Slots.vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Slots
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>Introduce el texto Cancelar en el componente <strong>Slots</strong></p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Slots</span><span class="token punctuation">&gt;</span></span>Cancelar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Slots</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="directiva-v-slot"><a href="#directiva-v-slot" class="header-anchor">#</a> Directiva v-slot</h2> <p>Utiliza v-slot:name cuando añades el nombre directamente.</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>name</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>Utiliza v-slot[slotName] cuando lo vincules a una variable</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>[slotName]</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="v-slot-multiples"><a href="#v-slot-multiples" class="header-anchor">#</a> v-slot múltiples</h2> <p>Cuando trabajamos con varios slot tenemos aque añadirle un nombre para utilizar el slot correspondiente en la parte de Vista.</p> <h3 id="componente-esquema-vue"><a href="#componente-esquema-vue" class="header-anchor">#</a> Componente Esquema.vue</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>header<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>default<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>aside</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>aside<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>aside</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="vista-slotmultiple-vue"><a href="#vista-slotmultiple-vue" class="header-anchor">#</a> Vista SlotMultiple.vue</h3> <p>Para poder utilizar los slopt tendremos que anidar cada slot con una etiqueta template donde utilizaremos la directiva v-slot.</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>centrado<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Esqueleto</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>header</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Header<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>default</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Contenido<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>aside</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Aside<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Esqueleto</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> Esquema <span class="token keyword">from</span> <span class="token string">'@/components/Esquema.vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Esquema
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="v-slot-scoped"><a href="#v-slot-scoped" class="header-anchor">#</a> v-slot scoped</h2> <h3 id="componente-libro-vue"><a href="#componente-libro-vue" class="header-anchor">#</a> Componente Libro.vue</h3> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>libro<span class="token punctuation">&quot;</span></span> <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>titulo<span class="token punctuation">&quot;</span></span> 
+      <span class="token attr-name">:tituloLibro</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>tituloLibro<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      tituloLibro<span class="token operator">:</span> <span class="token string">&quot;Datos provienen del padre&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="vista-biblioteca-vue"><a href="#vista-biblioteca-vue" class="header-anchor">#</a> Vista Biblioteca.vue</h3> <p>A través de slotProps puedo recibir el props del componente utilizando slotProps + . + props</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Libro</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- &lt;template v-slot:titulo=&quot;slotProps&quot;&gt;
+      {{ slotProps.tituloLibro }}
+    &lt;/template&gt; --&gt;</span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name"><span class="token namespace">v-slot:</span>titulo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{titulo:Libro}<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      {{ tituloLibro }}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span> 
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Libro</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> Libro <span class="token keyword">from</span> <span class="token string">'@/components/Libro.vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'About'</span><span class="token punctuation">,</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Libro
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vue/assets/js/app.7f626d32.js" defer></script><script src="/vue/assets/js/2.667916cb.js" defer></script><script src="/vue/assets/js/12.90a80ad9.js" defer></script>
+  </body>
+</html>

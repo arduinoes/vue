@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vuex | Curso Vue.js</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="Nivel principiantes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/vue/assets/css/0.styles.221a524c.css" as="style"><link rel="preload" href="/vue/assets/js/app.7f626d32.js" as="script"><link rel="preload" href="/vue/assets/js/2.667916cb.js" as="script"><link rel="preload" href="/vue/assets/js/14.573de3f3.js" as="script"><link rel="prefetch" href="/vue/assets/js/10.1a5fc0d2.js"><link rel="prefetch" href="/vue/assets/js/11.78a93a47.js"><link rel="prefetch" href="/vue/assets/js/12.90a80ad9.js"><link rel="prefetch" href="/vue/assets/js/13.57599c97.js"><link rel="prefetch" href="/vue/assets/js/15.fd70d7b7.js"><link rel="prefetch" href="/vue/assets/js/3.48ae7e51.js"><link rel="prefetch" href="/vue/assets/js/4.010f4d26.js"><link rel="prefetch" href="/vue/assets/js/5.009f7950.js"><link rel="prefetch" href="/vue/assets/js/6.60c067ee.js"><link rel="prefetch" href="/vue/assets/js/7.dfaf1eb0.js"><link rel="prefetch" href="/vue/assets/js/8.1d9a6f8b.js"><link rel="prefetch" href="/vue/assets/js/9.5d278ea6.js">
+    <link rel="stylesheet" href="/vue/assets/css/0.styles.221a524c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue/" class="home-link router-link-active"><!----> <span class="site-name">Curso Vue.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue/directivas/" class="nav-link">
+  Directivas
+</a></div><div class="nav-item"><a href="/vue/tienda/" class="nav-link">
+  Tienda
+</a></div><div class="nav-item"><a href="/vue/componentes/" class="nav-link">
+  Componentes
+</a></div><div class="nav-item"><a href="/vue/slots/" class="nav-link">
+  Slots
+</a></div><div class="nav-item"><a href="/vue/router/" class="nav-link">
+  Router
+</a></div><div class="nav-item"><a href="/vue/paginacion/" class="nav-link">
+  Paginación
+</a></div><div class="nav-item"><a href="/vue/vuex/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Vuex
+</a></div><div class="nav-item"><a href="https://www.youtube.com/playlist?list=PLgh8bcLDakt3oPmNoEfdfF4yd2b6KNCUX" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Canal Youtube
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue/directivas/" class="nav-link">
+  Directivas
+</a></div><div class="nav-item"><a href="/vue/tienda/" class="nav-link">
+  Tienda
+</a></div><div class="nav-item"><a href="/vue/componentes/" class="nav-link">
+  Componentes
+</a></div><div class="nav-item"><a href="/vue/slots/" class="nav-link">
+  Slots
+</a></div><div class="nav-item"><a href="/vue/router/" class="nav-link">
+  Router
+</a></div><div class="nav-item"><a href="/vue/paginacion/" class="nav-link">
+  Paginación
+</a></div><div class="nav-item"><a href="/vue/vuex/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Vuex
+</a></div><div class="nav-item"><a href="https://www.youtube.com/playlist?list=PLgh8bcLDakt3oPmNoEfdfF4yd2b6KNCUX" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Canal Youtube
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vuex</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/vuex/#como-comunicarse-con-vuex" class="sidebar-link">Como comunicarse con Vuex</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue/vuex/#acciones-y-mutaciones-vuex" class="sidebar-link">Acciones y Mutaciones VUEX</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/vue/vuex/#methods-y-computed-views" class="sidebar-link">Methods y computed VIEWS</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/vuex/#alternativa" class="sidebar-link">Alternativa</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuex"><a href="#vuex" class="header-anchor">#</a> Vuex</h1> <p>Una solución para compartir/intercambiar/modificar/añadir... datos, métodos y acciones entre archivos es Vuex.</p> <p><img src="/01-Vuex.jpg" alt="Vuex"></p> <p>Vuex permite centralizar los datos, métodos y acciones.</p> <p><img src="/02-VuexStore.png" alt="Store"></p> <p>Funciona igual que la parte del script que habíamos visto hasta ahora con pequeñas diferencias. data === store, methods === actions y computed === getters</p> <p><img src="/03-AppStrore.png" alt="AppVsStore"></p> <p>Para este intercambios de datos tenemos que establecer un protocolo para su reactividad.</p> <p><img src="/04-Estandarizacion.png" alt="Store"></p> <p>Una vez actualizados los datos tienen que recibirse en los archivos vinculados.</p> <p><img src="/05-Reactivo.png" alt="Store"></p> <p>Esto lo conseguimos con las mutaciones que se encargan de actualizar los datos una vez que son enviados a través de las acciones.</p> <p><img src="/06-Mutations.png" alt="Store"></p> <h2 id="como-comunicarse-con-vuex"><a href="#como-comunicarse-con-vuex" class="header-anchor">#</a> Como comunicarse con Vuex</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>nombreObjeto
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>dispatch<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token string">'nombreFuncion'</span><span class="token punctuation">,</span> <span class="token string">'payload'</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="acciones-y-mutaciones-vuex"><a href="#acciones-y-mutaciones-vuex" class="header-anchor">#</a> Acciones y Mutaciones VUEX</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">async</span> <span class="token function">obtenerDatos</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getDocs</span><span class="token punctuation">(</span><span class="token function">collection</span><span class="token punctuation">(</span>db<span class="token punctuation">,</span> <span class="token string">&quot;productos&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">doc</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> producto <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    producto<span class="token punctuation">.</span>id <span class="token operator">=</span> doc<span class="token punctuation">.</span>id
+    <span class="token keyword">this</span><span class="token punctuation">.</span>productos<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>producto<span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>producto<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>vs</p> <div class="language-js extra-class"><pre class="language-js"><code>state<span class="token operator">:</span> <span class="token punctuation">{</span>
+  usuario<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  obras<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  obra<span class="token operator">:</span> <span class="token punctuation">{</span>
+    id<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    title<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    author<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    date<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    synopsis<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    link<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    photo<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    categoria<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    editorial<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    pelicula<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    comic<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>mutations:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token constant">SET_OBRAS</span><span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> payload</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  state<span class="token punctuation">.</span>obras <span class="token operator">=</span> payload<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>actions:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">async</span> <span class="token function">obtenerDatos</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> commit <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> obras <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getDocs</span><span class="token punctuation">(</span><span class="token function">collection</span><span class="token punctuation">(</span>db<span class="token punctuation">,</span> <span class="token string">&quot;obras&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  data<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">doc</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> obra <span class="token operator">=</span> doc<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    obra<span class="token punctuation">.</span>id <span class="token operator">=</span> doc<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+    obras<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>obra<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obra<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">&quot;SET_OBRAS&quot;</span><span class="token punctuation">,</span> obras<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h2 id="methods-y-computed-views"><a href="#methods-y-computed-views" class="header-anchor">#</a> Methods y computed VIEWS</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapActions<span class="token punctuation">,</span> mapState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+</code></pre></div><p>methods</p> <div class="language-js extra-class"><pre class="language-js"><code>methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token function">mapActions</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'obtenerDatos'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code>computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+<span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'obras'</span><span class="token punctuation">,</span> <span class="token string">'obra'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">obtenerDatos</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><h3 id="alternativa"><a href="#alternativa" class="header-anchor">#</a> Alternativa</h3> <div class="language-js extra-class"><pre class="language-js"><code>methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token function">enviar</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'obtenerDatos'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">recibir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>obras
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">enviar</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">recibir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> 
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/vue/assets/js/app.7f626d32.js" defer></script><script src="/vue/assets/js/2.667916cb.js" defer></script><script src="/vue/assets/js/14.573de3f3.js" defer></script>
+  </body>
+</html>
